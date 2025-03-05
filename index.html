@@ -11,9 +11,9 @@
         <h1>Alex Styles</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="tooltip" data-tooltip="Learn more about Alex">About Me</a></li>
+                <li><a href="#portfolio" class="tooltip" data-tooltip="View Alex's work">Portfolio</a></li>
+                <li><a href="#contact" class="tooltip" data-tooltip="Get in touch">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -26,10 +26,10 @@
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
-            <div class="project">Project 1</div>
-            <div class="project">Project 2</div>
-            <div class="project">Project 3</div>
-            <div class="project">Project 4</div>
+            <div class="project" onclick="openModal('Project 1 Details')">Project 1</div>
+            <div class="project" onclick="openModal('Project 2 Details')">Project 2</div>
+            <div class="project" onclick="openModal('Project 3 Details')">Project 3</div>
+            <div class="project" onclick="openModal('Project 4 Details')">Project 4</div>
         </div>
     </section>
     
@@ -48,6 +48,13 @@
             <button type="submit">Send</button>
         </form>
     </section>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
     
     <script src="script.js"></script>
 </body>
