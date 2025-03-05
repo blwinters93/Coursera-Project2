@@ -20,16 +20,37 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Alex Styles, a passionate graphic designer specializing in visual storytelling.</p>
+        <p>Hi, I'm Alex Styles, a creative and passionate graphic designer with over five years of experience in digital branding, user interface design, and visual storytelling. I specialize in creating compelling visuals that communicate ideas effectively, enhance user experiences, and build memorable brand identities.</p>
+        <p>My expertise includes working with Adobe Creative Suite, Figma, and other design tools to craft engaging digital content, from website designs to social media campaigns. With a keen eye for aesthetics and detail, I blend modern design trends with timeless principles to create work that stands out. When I'm not designing, I enjoy photography, exploring new creative techniques, and staying updated with the latest trends in UI/UX.</p>
     </section>
     
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
-            <div class="project" onclick="openModal('Project 1 Details')">Project 1</div>
-            <div class="project" onclick="openModal('Project 2 Details')">Project 2</div>
-            <div class="project" onclick="openModal('Project 3 Details')">Project 3</div>
-            <div class="project" onclick="openModal('Project 4 Details')">Project 4</div>
+            <a href="project1.html" class="project">
+                <div class="project-info">
+                    <h3>Brand Identity Refresh</h3>
+                    <p>A full rebrand for a tech startup, including a new logo, color scheme, and marketing materials.</p>
+                </div>
+            </a>
+            <a href="project2.html" class="project">
+                <div class="project-info">
+                    <h3>E-Commerce Website Design</h3>
+                    <p>Designed a modern and intuitive e-commerce website for a sustainable fashion brand.</p>
+                </div>
+            </a>
+            <a href="project3.html" class="project">
+                <div class="project-info">
+                    <h3>Mobile App UI/UX</h3>
+                    <p>Created a seamless user experience for a fitness tracking mobile app, focusing on accessibility and ease of use.</p>
+                </div>
+            </a>
+            <a href="project4.html" class="project">
+                <div class="project-info">
+                    <h3>Social Media Campaign</h3>
+                    <p>Developed a visually engaging social media campaign that increased brand engagement by 40%.</p>
+                </div>
+            </a>
         </div>
     </section>
     
@@ -48,13 +69,6 @@
             <button type="submit">Send</button>
         </form>
     </section>
-    
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modal-text"></p>
-        </div>
-    </div>
     
     <script src="script.js"></script>
 </body>

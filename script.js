@@ -17,21 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/* Modal Functionality */
-function openModal(content) {
-    const modal = document.getElementById("modal");
-    const modalText = document.getElementById("modal-text");
-    modalText.innerText = content;
-    modal.style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById("modal");
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
+/* Expand Project Description on Hover */
+document.querySelectorAll(".project").forEach(project => {
+    project.addEventListener("mouseover", function() {
+        this.querySelector(".project-info").style.bottom = "0";
+    });
+    
+    project.addEventListener("mouseleave", function() {
+        this.querySelector(".project-info").style.bottom = "-100%";
+    });
+});
