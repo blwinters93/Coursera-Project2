@@ -18,10 +18,11 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -39,7 +40,7 @@ section {
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -83,4 +84,36 @@ button {
 
 button:hover {
     background: #444;
+}
+
+/* Responsive Design */
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
