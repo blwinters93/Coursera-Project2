@@ -18,13 +18,13 @@
         </nav>
     </header>
     
-    <section id="about" class="about-container">
+    <section id="about" class="about-container fade-in">
         <h2>About Me</h2>
         <p>Hi, I'm Alex Styles, a creative and passionate graphic designer with over five years of experience in digital branding, user interface design, and visual storytelling. I specialize in creating compelling visuals that communicate ideas effectively, enhance user experiences, and build memorable brand identities.</p>
         <p>My expertise includes working with Adobe Creative Suite, Figma, and other design tools to craft engaging digital content, from website designs to social media campaigns. With a keen eye for aesthetics and detail, I blend modern design trends with timeless principles to create work that stands out. When I'm not designing, I enjoy photography, exploring new creative techniques, and staying updated with the latest trends in UI/UX.</p>
     </section>
     
-    <section id="portfolio">
+    <section id="portfolio" class="fade-in">
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
             <div class="project" data-title="Brand Identity Refresh" data-description="A full rebrand for a tech startup, including a new logo, color scheme, and marketing materials." data-link="project1.html">
@@ -50,7 +50,7 @@
         </div>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
         <form>
             <label for="name">Name:</label>
@@ -68,7 +68,7 @@
     
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <button class="modal-close" onclick="closeModal()">Close</button>
             <h2 id="modal-title"></h2>
             <p id="modal-text"></p>
             <a id="modal-link" href="#" target="_blank">View Project</a>
