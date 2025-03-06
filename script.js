@@ -1,38 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".project").forEach(project => {
-        project.style.opacity = 0;
-        project.style.transform = "translateY(20px)";
-        project.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
-    });
-
-    window.addEventListener("scroll", function() {
-        document.querySelectorAll(".project").forEach(project => {
-            let position = project.getBoundingClientRect().top;
-            let screenPosition = window.innerHeight / 1.3;
-            if (position < screenPosition) {
-                project.style.opacity = 1;
-                project.style.transform = "translateY(0)";
-            }
-        });
-    });
-
-    /* Fade-in effect for Portfolio and Contact sections */
-    const fadeSections = document.querySelectorAll(".fade-in");
-
-    function fadeInSection() {
-        fadeSections.forEach(section => {
-            let position = section.getBoundingClientRect().top;
-            let screenPosition = window.innerHeight / 1.3;
-            if (position < screenPosition) {
-                section.classList.add("fade-in-visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", fadeInSection);
-    fadeInSection();
-
-    /* Expand Project Box on Hover (Accordion Style) */
+    /* Expand Only One Project Box on Hover */
     document.querySelectorAll(".project").forEach(project => {
         project.addEventListener("mouseover", function() {
             this.style.height = "auto";
@@ -63,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("modal-title").innerText = title;
         document.getElementById("modal-text").innerText = description;
         document.getElementById("modal-link").href = link;
+        document.getElementById("modal-link").style.color = "white"; // Fix color contrast
         modal.style.display = "flex";
     }
 
@@ -70,25 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("modal").style.display = "none";
     }
 
+    document.querySelector(".modal-close").addEventListener("click", closeModal);
     window.onclick = function(event) {
         const modal = document.getElementById("modal");
         if (event.target === modal) {
             modal.style.display = "none";
         }
     };
-
-    /* Responsive Design Adjustments */
-    function adjustLayout() {
-        const portfolioGrid = document.querySelector(".portfolio-grid");
-        if (window.innerWidth <= 768) {
-            portfolioGrid.style.gridTemplateColumns = "1fr";
-        } else if (window.innerWidth <= 1024) {
-            portfolioGrid.style.gridTemplateColumns = "1fr 1fr";
-        } else {
-            portfolioGrid.style.gridTemplateColumns = "repeat(2, 1fr)";
-        }
-    }
-
-    window.addEventListener("resize", adjustLayout);
-    adjustLayout();
 });
