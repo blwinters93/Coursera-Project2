@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
+    /* Ensure all sections are visible initially */
+    document.querySelectorAll(".fade-in").forEach(section => {
+        section.style.opacity = 1;
+        section.style.transform = "translateY(0)";
+    });
+
+    /* Fade-in effect for Portfolio and Contact sections */
+    function fadeInSection() {
+        document.querySelectorAll(".fade-in").forEach(section => {
+            let position = section.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1.2;
+            if (position < screenPosition) {
+                section.classList.add("fade-in-visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", fadeInSection);
+    fadeInSection();
+
     /* Expand Only One Project Box on Hover */
     document.querySelectorAll(".project").forEach(project => {
         project.addEventListener("mouseover", function() {
